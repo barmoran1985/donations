@@ -2,14 +2,18 @@
  * Created by barrymoran on 25/10/2016.
  */
 queue()
-   .defer(d3.json, "/donorsUS/projects")
+   .defer(d3.json, "../donorsUS/projects")
+   .defer(d3.json, "../static/us-states.json")
    .await(makeGraphs);
 
-function makeGraphs(error, projectsJson) {
+function makeGraphs(error, projectsJson, statesJson) {
 
    //Clean projectsJson data
    var donorsUSProjects = projectsJson;
    var dateFormat = d3.time.format("%Y-%m-%d %H:%M:%S");
+
+
+
    donorsUSProjects.forEach(function (d) {
        d["date_posted"] = dateFormat.parse(d["date_posted"]);
        d["date_posted"].setDate(1);
@@ -71,6 +75,9 @@ function makeGraphs(error, projectsJson) {
    var numberProjectsND = dc.numberDisplay("#number-projects-nd");
    var totalDonationsND = dc.numberDisplay("#total-donations-nd");
    var fundingStatusChart = dc.pieChart("#funding-chart");
+   var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
+
+
 
 
    selectField = dc.selectMenu('#menu-select')
@@ -127,6 +134,24 @@ function makeGraphs(error, projectsJson) {
        .dimension(fundingStatus)
        .group(numProjectsByFundingStatus);
 
+    fundingStatusmap
+        .width(500)
+        .height(330)
+        .dimension(stateDim)
+        .group(totalDonationsByState)
+        .colors(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#7C151D"])
+        .colorDomain([0, max_state])
+        .overlayGeoJson(statesJson["features"], "state", function (d) {
+            return d.properties.name;
+        })
+        .projection(d3.geo.albersUsa()
+        .scale(600)
+        .translate([340, 150]))
+        .title(function (p) {
+            return "State: " + p["key"]
+                + "\n"
+                + "Total Donations: " + Math.round(p["value"]) + " $";
+        });
 
    dc.renderAll();
 }
