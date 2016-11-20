@@ -1,0 +1,1 @@
+web : gunicorn sclshool_donations:app

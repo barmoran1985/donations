@@ -37,6 +37,7 @@ function makeGraphs(error, projectsJson, statesJson) {
    var stateDim = ndx.dimension(function (d) {
        return d["school_state"];
    });
+
    var totalDonationsDim = ndx.dimension(function (d) {
        return d["total_donations"];
    });
@@ -76,13 +77,14 @@ function makeGraphs(error, projectsJson, statesJson) {
    var totalDonationsND = dc.numberDisplay("#total-donations-nd");
    var fundingStatusChart = dc.pieChart("#funding-chart");
    var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
+   var stuffND = dc.numberDisplay("#total-donations-stuff");
 
 
 
 
    selectField = dc.selectMenu('#menu-select')
-       .dimension(stateDim)
-       .group(stateGroup);
+        .dimension(stateDim)
+        .group(stateGroup);
 
 
    numberProjectsND
@@ -100,8 +102,16 @@ function makeGraphs(error, projectsJson, statesJson) {
        .group(totalDonations)
        .formatNumber(d3.format(".3s"));
 
+    stuffND
+        .formatNumber(d3.format("d"))
+       .valueAccessor(function (d) {
+           return d;
+       })
+       .group(totalDonations)
+       .formatNumber(d3.format(".3s"));
+
  timeChart
-       .width(800)
+       .width(960)
        .height(200)
        .margins({top: 10, right: 50, bottom: 30, left: 50})
        .dimension(dateDim)
@@ -120,11 +130,12 @@ function makeGraphs(error, projectsJson, statesJson) {
        .xAxis().ticks(4);
 
    povertyLevelChart
-       .width(300)
-       .height(250)
+       .width(380)
+       .height(330)
        .dimension(povertyLevelDim)
        .group(numProjectsByPovertyLevel)
        .xAxis().ticks(4);
+
 
    fundingStatusChart
        .height(220)
@@ -145,7 +156,7 @@ function makeGraphs(error, projectsJson, statesJson) {
             return d.properties.name;
         })
         .projection(d3.geo.albersUsa()
-        .scale(600)
+        .scale(500)
         .translate([340, 150]))
         .title(function (p) {
             return "State: " + p["key"]

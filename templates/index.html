@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="../static/lib/css/introjs.css"/>
 
 </head>
-<body class="application">
+<body background="../static/stucco_texture2042.jpg" class="application">
 
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top container-fluid" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="./">School Donations Dashboard</a>
@@ -33,11 +33,11 @@
             <div class="row">
 
                 <!-- Funding Map -->
-                <div class="chart-wrapper">
-                    <div class="chart-title">
+                <div class="chart-wrapper" id="map-stage">
+                    <div id="map-title" class="chart-title">
                         Total Donations by state
                     </div>
-                    <div class="chart-stage">
+                    <div class="chart-stage" >
                         <div id="funding-map" data-step="8"
                              data-intro="Mapping donations by state"
                              style="font-weight: normal" data-position="right"></div>
@@ -46,7 +46,7 @@
                 <!-- Funding Map -->
 
                 <!-- Time Chart -->
-                <div class="col-sm-12">
+                <div id="numDonations" class="col-sm-12">
                     <div class="chart-wrapper">
                         <div class="chart-title">
                             Number of Donations
@@ -63,7 +63,7 @@
 
 
                 <!-- Resources -->
-                <div class="col-sm-6">
+                <div id="resource" class="col-sm-6">
                     <div class="chart-wrapper">
                         <div class="chart-title">
                             Resources Type
@@ -78,7 +78,7 @@
 
 
                 <!-- funding Pie -->
-                <div class="col-sm-6">
+                <div id="pie-fund" class="col-sm-6">
                     <div class="chart-wrapper">
                         <div class="chart-title">
                             Funding Status
@@ -96,7 +96,7 @@
 
         <!-- Poverty -->
         <div class="col-sm-3">
-            <div class="chart-wrapper">
+            <div id="poverty" class="chart-wrapper">
                 <div class="chart-title">
                     Poverty Level
                 </div>
@@ -110,21 +110,21 @@
 
 
         <!-- menu select -->
-{#        <div class="col-sm-6">#}
-{#            <div class="chart-wrapper">#}
-{#                <div class="chart-title">#}
-{#                    Donation State#}
-{#                </div>#}
-{#                <div class="chart-stage">#}
-{#                    <div id="menu-select" data-step="5" data-intro="The description that you want"#}
-{#                         style="font-weight: normal" data-position="right"></div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
+        <div id="menu" class="col-sm-6">
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Donation City
+                </div>
+                <div class="chart-stage">
+                    <div id="menu-select" data-step="5" data-intro="The description that you want"
+                         style="font-weight: normal" data-position="right"></div>
+                </div>
+            </div>
+        </div>
         <!-- menu select -->
 
         <!-- Metric 1 -->
-        <div class="col-sm-2">
+        <div id="total-don" class="col-sm-2 total ">
             <div class="chart-wrapper">
                 <div class="chart-title">
                     Total Number of Donations
@@ -133,13 +133,14 @@
                      style="
                    position: relative;
                    font-weight: normal;
-                   background: #33CC99;
+                   background: lightblue;
                    font-size: 29px;
                    color: white;
                    vertical-align: middle;
                    text-align: center;
                    padding-top: 12px;
-                   padding-bottom: 0px;">
+                   padding-bottom: 0px;
+                   border-radius: 0px 0px 10px 10px;">
                     <div id="number-projects-nd"></div>
                 </div>
             </div>
@@ -147,7 +148,7 @@
         <!-- Metric 1 -->
 
         <!-- Metric 2 -->
-        <div class="col-sm-2">
+        <div id="green" class="col-sm-2 total">
             <div class="chart-wrapper">
                 <div class="chart-title">
                     Total Donations in USD
@@ -160,13 +161,27 @@
         </div>
         <!-- Metric 2 -->
 
+        <!-- Metric 3 -->
+        <div id="red" class="col-sm-2 total">
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Total Stuff
+                </div>
+                <div id="red-back" class="chart-stage">
+                    <div id="total-donations-stuff" data-step="9" data-intro="The description that you want"
+                         style="font-weight: normal" data-position="left"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Metric 3 -->
+
     </div>
 </div>
 
 
 
-<hr>
-<p class="small text-muted"> Data viz &#9829; from Code Institute</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><hr>
+
 
 </div>
 <script src="../static/lib/js/jquery.min.js"></script>
