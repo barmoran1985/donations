@@ -16,8 +16,7 @@ MONGO_URI = 'mongodb://heroku_w54wv1ks:4snrig5l7di3lmb4kd6ssavo3q@ds159387.mlab.
 
 @app.route("/")
 def index():
-    return render_template("index.html")\
-
+    return render_template("index.html")
 
 
 @app.route("/template")
@@ -40,3 +39,5 @@ def donor_projects():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+    
