@@ -11,7 +11,7 @@ DBS_NAME = 'heroku_w54wv1ks'
 COLLECTION_NAME = 'projects'
 FIELDS = {'funding_status': True, 'school_state': True, 'resource_type': True, 'poverty_level': True,
           'date_posted': True, 'total_donations': True, '_id': False}
-MONGO_URI = 'mongodb://barmoran:mafiaethos@ds159387.mlab.com:59387/heroku_w54wv1ks'
+MONGO_URI = 'mongodb://heroku_w54wv1ks:4snrig5l7di3lmb4kd6ssavo3q@ds159387.mlab.com:59387/heroku_w54wv1ks'
 
 
 @app.route("/")
