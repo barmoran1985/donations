@@ -149,6 +149,13 @@ function makeGraphs(error, projectsJson, statesJson) {
         .dimension(fundingStatus)
         .group(numProjectsByFundingStatus);
 
+    gradeLevelChart
+        .width(300)
+        .height(250)
+        .dimension(gradeLevelDim)
+        .group(numProjectsByGradeLevel)
+        .xAxis().ticks(4);
+
     fundingStatusmap
         .width(500)
         .height(330)
@@ -168,12 +175,7 @@ function makeGraphs(error, projectsJson, statesJson) {
                 + "Total Donations: " + Math.round(p["value"]) + " $";
         });
 
-    gradeLevelChart
-        .width(300)
-        .height(250)
-        .dimension(gradeLevelDim)
-        .group(numProjectsByGradeLevel)
-        .xAxis().ticks(4);
+
 
     dc.renderAll();
 }
