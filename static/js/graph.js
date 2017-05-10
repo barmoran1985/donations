@@ -78,12 +78,13 @@ function makeGraphs(error, projectsJson, statesJson) {
     var timeChart = dc.barChart("#time-chart");
     var resourceTypeChart = dc.rowChart("#resource-type-row-chart");
     var povertyLevelChart = dc.rowChart("#poverty-level-row-chart");
+    var gradeLevelChart = dc.rowChart("#grade-level-row-chart");
     var numberProjectsND = dc.numberDisplay("#number-projects-nd");
     var totalDonationsND = dc.numberDisplay("#total-donations-nd");
     var fundingStatusChart = dc.pieChart("#funding-chart");
     var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
     var stuffND = dc.numberDisplay("#total-donations-stuff");
-    var gradeLevelChart = dc.rowChart("#grade-level-row-chart");
+
 
 
     selectField = dc.selectMenu('#menu-select')
