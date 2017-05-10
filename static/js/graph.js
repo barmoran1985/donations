@@ -33,6 +33,15 @@ function makeGraphs(error, projectsJson, statesJson) {
     var povertyLevelDim = ndx.dimension(function (d) {
         return d["poverty_level"];
     });
+
+    var gradeLevelDim = ndx.dimension(function (d) {
+        return d["grade_level"];
+    });
+
+    var focusDim = ndx.dimension(function (d) {
+        return d["primary_focus_area"];
+    });
+
     var stateDim = ndx.dimension(function (d) {
         return d["school_state"];
     });
@@ -45,17 +54,18 @@ function makeGraphs(error, projectsJson, statesJson) {
         return d["funding_status"];
     });
 
-    var gradeLevelDim = ndx.dimension(function (d) {
-        return d["grade_level"];
-    });
+
 
 
     //Calculate metrics
     var numProjectsByDate = dateDim.group();
     var numProjectsByResourceType = resourceTypeDim.group();
     var numProjectsByPovertyLevel = povertyLevelDim.group();
-    var numProjectsByFundingStatus = fundingStatus.group();
     var numProjectsByGradeLevel = gradeLevelDim.group();
+    var numProjectsByArea = focusDim.group();
+    var numProjectsByFundingStatus = fundingStatus.group();
+
+
 
 
     var totalDonationsByState = stateDim.group().reduceSum(function (d) {
@@ -80,6 +90,7 @@ function makeGraphs(error, projectsJson, statesJson) {
     var resourceTypeChart = dc.rowChart("#resource-type-row-chart");
     var povertyLevelChart = dc.rowChart("#poverty-level-row-chart");
     var gradeLevelChart = dc.rowChart("#grade-level-row-chart");
+    var focusChart = dc.rowChart("#focus-area-row-chart");
     var numberProjectsND = dc.numberDisplay("#number-projects-nd");
     var totalDonationsND = dc.numberDisplay("#total-donations-nd");
     var fundingStatusChart = dc.pieChart("#funding-chart");
@@ -140,6 +151,13 @@ function makeGraphs(error, projectsJson, statesJson) {
         .height(330)
         .dimension(povertyLevelDim)
         .group(numProjectsByPovertyLevel)
+        .xAxis().ticks(4);
+
+    focusChart
+        .width(380)
+        .height(330)
+        .dimension(focusDim)
+        .group(numProjectsByArea)
         .xAxis().ticks(4);
 
 
