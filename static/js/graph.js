@@ -46,9 +46,9 @@ function makeGraphs(error, projectsJson, statesJson) {
         return d["school_state"];
     });
 
-    var totalDonationsDim = ndx.dimension(function (d) {
-        return d["total_donations"];
-    });
+    // var totalDonationsDim = ndx.dimension(function (d) {
+    //     return d["total_donations"];
+    // });
 
     var fundingStatus = ndx.dimension(function (d) {
         return d["funding_status"];
@@ -59,9 +59,7 @@ function makeGraphs(error, projectsJson, statesJson) {
     var numProjectsByDate = dateDim.group();
     var numProjectsByResourceType = resourceTypeDim.group();
     var numProjectsByPovertyLevel = povertyLevelDim.group();
-    var numProjectsByGradeLevel = gradeLevelDim.group().reduceSum(function (d) {
-        return d["total_donations"];
-    });
+    var numProjectsByGradeLevel = gradeLevelDim.group();
     var numProjectsByArea = focusDim.group();
     var numProjectsByFundingStatus = fundingStatus.group();
 
