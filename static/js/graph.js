@@ -50,9 +50,9 @@ function makeGraphs(error, projectsJson, statesJson) {
         return d["total_donations"];
     });
 
-    // var fundingStatus = ndx.dimension(function (d) {
-    //     return d["funding_status"];
-    // });
+    var fundingStatus = ndx.dimension(function (d) {
+        return d["funding_status"];
+    });
 
 
     //Calculate metrics
