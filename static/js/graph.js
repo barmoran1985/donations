@@ -67,7 +67,7 @@ function makeGraphs(error, projectsJson, statesJson) {
     var totalDonationsByState = stateDim.group().reduceSum(function (d) {
         return d["total_donations"];
     });
-    var stateGroup = stateDim.group();
+    // var stateGroup = stateDim.group();
 
 
     var all = ndx.groupAll();
@@ -89,14 +89,15 @@ function makeGraphs(error, projectsJson, statesJson) {
     var focusChart = dc.rowChart("#focus-area-row-chart");
     var numberProjectsND = dc.numberDisplay("#number-projects-nd");
     var totalDonationsND = dc.numberDisplay("#total-donations-nd");
+    var stuffND = dc.numberDisplay("#total-donations-stuff");
     var fundingStatusChart = dc.pieChart("#funding-chart");
     var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
-    var stuffND = dc.numberDisplay("#total-donations-stuff");
 
 
-    selectField = dc.selectMenu('#menu-select')
-        .dimension(stateDim)
-        .group(stateGroup);
+
+    // selectField = dc.selectMenu('#menu-select')
+    //     .dimension(stateDim)
+    //     .group(stateGroup);
 
 
     numberProjectsND
