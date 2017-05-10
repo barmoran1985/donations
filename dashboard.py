@@ -11,7 +11,7 @@ DBS_NAME = 'heroku_w54wv1ks'
 COLLECTION_NAME = 'projects'
 FIELDS = {'funding_status': True, 'school_state': True, 'resource_type': True, 'poverty_level': True,
           'date_posted': True, 'total_donations': True, 'grade_level': True, 'primary_focus_area': True, '_id': False}
-MONGODB_URI = 'mongodb://heroku_w54wv1ks:4snrig5l7di3lmb4kd6ssavo3q@ds159387.mlab.com:59387/heroku_w54wv1ks'
+MONGO_URI = 'mongodb://heroku_w54wv1ks:4snrig5l7di3lmb4kd6ssavo3q@ds159387.mlab.com:59387/heroku_w54wv1ks'
 
 
 @app.route("/")
@@ -26,7 +26,7 @@ def template():
 
 @app.route("/donorsUS/projects")
 def donor_projects():
-    connection = MongoClient(MONGODB_URI)
+    connection = MongoClient(MONGO_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
     projects = collection.find(projection=FIELDS, limit=20000)
     json_projects = []
