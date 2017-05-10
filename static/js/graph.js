@@ -47,6 +47,8 @@ function makeGraphs(error, projectsJson, statesJson) {
    });
 
 
+
+
    //Calculate metrics
    var numProjectsByDate = dateDim.group();
    var numProjectsByResourceType = resourceTypeDim.group();
