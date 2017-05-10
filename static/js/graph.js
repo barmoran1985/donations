@@ -59,7 +59,9 @@ function makeGraphs(error, projectsJson, statesJson) {
     var numProjectsByDate = dateDim.group();
     var numProjectsByResourceType = resourceTypeDim.group();
     var numProjectsByPovertyLevel = povertyLevelDim.group();
-    var numProjectsByGradeLevel = gradeLevelDim.group();
+    var numProjectsByGradeLevel = gradeLevelDim.group().reduceSum(function (d) {
+        return d["total_donations"];
+    });
     var numProjectsByArea = focusDim.group();
     var numProjectsByFundingStatus = fundingStatus.group();
 
