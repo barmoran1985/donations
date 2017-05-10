@@ -168,7 +168,7 @@ function makeGraphs(error, projectsJson, statesJson) {
                 + "Total Donations: " + Math.round(p["value"]) + " $";
         });
 
-        gradeLevelChart
+    gradeLevelChart
         .width(300)
         .height(250)
         .dimension(gradeLevelDim)
