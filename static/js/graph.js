@@ -22,6 +22,7 @@ function makeGraphs(error, projectsJson, statesJson) {
 
     //Create a Crossfilter instance
     var ndx = crossfilter(donorsUSProjects);
+    var ndx1 = crossfilter(donorsUSProjects);
 
     //Define Dimensions
     var dateDim = ndx.dimension(function (d) {
@@ -34,11 +35,11 @@ function makeGraphs(error, projectsJson, statesJson) {
         return d["poverty_level"];
     });
 
-    var gradeLevelDim = ndx.dimension(function (d) {
+    var gradeLevelDim = ndx1.dimension(function (d) {
         return d["grade_level"];
     });
 
-    var focusDim = ndx.dimension(function (d) {
+    var focusDim = ndx1.dimension(function (d) {
         return d["primary_focus_area"];
     });
 
@@ -55,8 +56,6 @@ function makeGraphs(error, projectsJson, statesJson) {
     });
 
 
-
-
     //Calculate metrics
     var numProjectsByDate = dateDim.group();
     var numProjectsByResourceType = resourceTypeDim.group();
@@ -64,8 +63,6 @@ function makeGraphs(error, projectsJson, statesJson) {
     var numProjectsByGradeLevel = gradeLevelDim.group();
     var numProjectsByArea = focusDim.group();
     var numProjectsByFundingStatus = fundingStatus.group();
-
-
 
 
     var totalDonationsByState = stateDim.group().reduceSum(function (d) {
@@ -96,7 +93,6 @@ function makeGraphs(error, projectsJson, statesJson) {
     var fundingStatusChart = dc.pieChart("#funding-chart");
     var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
     var stuffND = dc.numberDisplay("#total-donations-stuff");
-
 
 
     selectField = dc.selectMenu('#menu-select')
@@ -194,7 +190,6 @@ function makeGraphs(error, projectsJson, statesJson) {
                 + "\n"
                 + "Total Donations: " + Math.round(p["value"]) + " $";
         });
-
 
 
     dc.renderAll();
