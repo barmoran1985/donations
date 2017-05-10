@@ -22,7 +22,6 @@ function makeGraphs(error, projectsJson, statesJson) {
 
     //Create a Crossfilter instance
     var ndx = crossfilter(donorsUSProjects);
-    var ndx1 = crossfilter(donorsUSProjects);
 
     //Define Dimensions
     var dateDim = ndx.dimension(function (d) {
@@ -35,11 +34,11 @@ function makeGraphs(error, projectsJson, statesJson) {
         return d["poverty_level"];
     });
 
-    var gradeLevelDim = ndx1.dimension(function (d) {
+    var gradeLevelDim = ndx.dimension(function (d) {
         return d["grade_level"];
     });
 
-    var focusDim = ndx1.dimension(function (d) {
+    var focusDim = ndx.dimension(function (d) {
         return d["primary_focus_area"];
     });
 
