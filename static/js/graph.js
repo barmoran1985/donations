@@ -2,8 +2,8 @@
  * Created by barrymoran on 25/10/2016.
  */
 queue()
-    .defer(d3.json, "../donorsUS/projects")
-    .defer(d3.json, "../static/us-states.json")
+    .defer(d3.json, "/donorsUS/projects")
+    .defer(d3.json, "/static/us-states.json")
     .await(makeGraphs);
 
 function makeGraphs(error, projectsJson, statesJson) {
@@ -92,7 +92,6 @@ function makeGraphs(error, projectsJson, statesJson) {
     var stuffND = dc.numberDisplay("#total-donations-stuff");
     var fundingStatusChart = dc.pieChart("#funding-chart");
     var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
-
 
 
     selectField = dc.selectMenu('#menu-select')
@@ -193,4 +192,5 @@ function makeGraphs(error, projectsJson, statesJson) {
 
 
     dc.renderAll();
+
 }
