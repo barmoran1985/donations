@@ -44,6 +44,7 @@ function makeGraphs(error, projectsJson, statesJson) {
     var fundingStatus = ndx.dimension(function (d) {
         return d["funding_status"];
     });
+
     var gradeLevelDim = ndx.dimension(function (d) {
         return d["grade_level"];
     });
@@ -152,7 +153,7 @@ function makeGraphs(error, projectsJson, statesJson) {
 
     gradeLevelChart
         .width(300)
-        .height(250)
+        .height(400)
         .dimension(gradeLevelDim)
         .group(numProjectsByGradeLevel)
         .xAxis().ticks(4);
