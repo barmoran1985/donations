@@ -46,9 +46,9 @@ function makeGraphs(error, projectsJson, statesJson) {
         return d["school_state"];
     });
 
-    // var totalDonationsDim = ndx.dimension(function (d) {
-    //     return d["total_donations"];
-    // });
+    var totalDonationsDim = ndx.dimension(function (d) {
+        return d["total_donations"];
+    });
 
     var fundingStatus = ndx.dimension(function (d) {
         return d["funding_status"];
@@ -67,7 +67,7 @@ function makeGraphs(error, projectsJson, statesJson) {
     var totalDonationsByState = stateDim.group().reduceSum(function (d) {
         return d["total_donations"];
     });
-    // var stateGroup = stateDim.group();
+    var stateGroup = stateDim.group();
 
 
     var all = ndx.groupAll();
@@ -95,9 +95,9 @@ function makeGraphs(error, projectsJson, statesJson) {
 
 
 
-    // selectField = dc.selectMenu('#menu-select')
-    //     .dimension(stateDim)
-    //     .group(stateGroup);
+    selectField = dc.selectMenu('#menu-select')
+        .dimension(stateDim)
+        .group(stateGroup);
 
 
     numberProjectsND
