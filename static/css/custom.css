@@ -1,159 +1,159 @@
 
 
-#number-projects-nd {
-   font-size: 60px;
-}
+/*#number-projects-nd {*/
+   /*font-size: 60px;*/
+/*}*/
 
-#total-donations-stuff {
-    font-size: 60px;
-}
+/*#total-donations-stuff {*/
+    /*font-size: 60px;*/
+/*}*/
 
-#numDonations {
-    /*position: relative;*/
-    /*left:265px;*/
-    /*top: 20px;*/
-    width: 970px;
-
-
-}
-#total-donations-nd {
-   font-size: 60px;
-
-}
-
-#map-stage {
-    /*position: relative;*/
-    width: 500px;
-    /*left: 280px;*/
-    padding-left: 10px;
+/*#numDonations {*/
+    /*!*position: relative;*!*/
+    /*!*left:265px;*!*/
+    /*!*top: 20px;*!*/
+    /*width: 970px;*/
 
 
-}
+/*}*/
+/*#total-donations-nd {*/
+   /*font-size: 60px;*/
 
-.dc-chart g.row text {
-   fill: black;
-   font-size: 12px;
-}
+/*}*/
 
-#total-projects {
-   background: #33CC99;
-   width: 200px;
-   /*position: relative;*/
-   height: 60px;
-   font-size: 29px;
-   color: white;
-   vertical-align: middle;
-   text-align: center;
-   padding-top: 12px;
-   padding-bottom: 0px;
-}
-
-#net-donations {
-   background: #33CC99;
-   width: 200px;
-   /*position: relative;*/
-   height: 60px;
-   font-size: 29px;
-   color: white;
-   vertical-align: middle;
-   text-align: center;
-   padding-top: 12px;
-   padding-bottom: 0px;
-}
+/*#map-stage {*/
+    /*!*position: relative;*!*/
+    /*width: 500px;*/
+    /*!*left: 280px;*!*/
+    /*padding-left: 10px;*/
 
 
-.dc-select-menu {
-   background: #33CC99;
-   width: 80%;
-   border: none;
-   /*position: relative;*/
-   height: 31px;
-   font-size: 15px;
-   color: white;
-   vertical-align: middle;
-   text-align: center;
-   padding-top: 4px;
-   padding-bottom: 0px;
+/*}*/
 
-}
+/*.dc-chart g.row text {*/
+   /*fill: black;*/
+   /*font-size: 12px;*/
+/*}*/
 
-.total {
-    position: fixed;
-}
-.chart-wrapper {
-    border-radius: 20px;
-}
+/*#total-projects {*/
+   /*background: #33CC99;*/
+   /*width: 200px;*/
+   /*!*position: relative;*!*/
+   /*height: 60px;*/
+   /*font-size: 29px;*/
+   /*color: white;*/
+   /*vertical-align: middle;*/
+   /*text-align: center;*/
+   /*padding-top: 12px;*/
+   /*padding-bottom: 0px;*/
+/*}*/
 
-#green {
-    border-radius: 0px;
-    top: 275px;
-    left: 30px;
-}
+/*#net-donations {*/
+   /*background: #33CC99;*/
+   /*width: 200px;*/
+   /*!*position: relative;*!*/
+   /*height: 60px;*/
+   /*font-size: 29px;*/
+   /*color: white;*/
+   /*vertical-align: middle;*/
+   /*text-align: center;*/
+   /*padding-top: 12px;*/
+   /*padding-bottom: 0px;*/
+/*}*/
 
-#poverty {
-    /*position: relative;*/
+
+/*.dc-select-menu {*/
+   /*background: #33CC99;*/
+   /*width: 80%;*/
+   /*border: none;*/
+   /*!*position: relative;*!*/
+   /*height: 31px;*/
+   /*font-size: 15px;*/
+   /*color: white;*/
+   /*vertical-align: middle;*/
+   /*text-align: center;*/
+   /*padding-top: 4px;*/
+   /*padding-bottom: 0px;*/
+
+/*}*/
+
+/*.total {*/
+    /*position: fixed;*/
+/*}*/
+/*.chart-wrapper {*/
+    /*border-radius: 20px;*/
+/*}*/
+
+/*#green {*/
+    /*border-radius: 0px;*/
+    /*top: 275px;*/
+    /*left: 30px;*/
+/*}*/
+
+/*#poverty {*/
+    /*!*position: relative;*!*/
+    /*!*width: 400px;*!*/
+    /*!*height:380px;*!*/
+    /*!*right: 40px;*!*/
+/*}*/
+
+/*#funding-map {*/
+    /*!*position: relative;*!*/
+    /*!*right: 100px;*!*/
+    /*!*margin-top: 50px;*!*/
+/*}*/
+
+/*#map-title {*/
+    /*!*position: relative;*!*/
+    /*!*right: 11px;*!*/
+    /*width: 499px;*/
+/*}*/
+
+/*#total-don {*/
+    /*!*left: 30px;*!*/
+    /*!*top: 80px;*!*/
+/*}*/
+
+/*#pie-fund {*/
+    /*!*position: relative;*!*/
+    /*!*left: 534px;*!*/
+    /*!*top: 40px;*!*/
+    /*width: 270px;*/
+/*}*/
+
+/*#funding-chart {*/
+    /*!*position: relative;*!*/
+    /*!*right: 40px;*!*/
+/*}*/
+
+/*#resource {*/
+    /*!*position: relative;*!*/
+    /*!*left: 520px;*!*/
+    /*!*top: 40px;*!*/
+    /*height: 200px;*/
+/*}*/
+/*#red {*/
+    /*!*top: 465px;*!*/
+    /*!*left: 30px;*!*/
+    /*color: white;*/
+/*}*/
+
+/*#red-back{*/
+    /*background-color: #d85b50;*/
+    /*border-radius: 0px 0px 10px 10px;*/
+/*}*/
+
+/*#menu {*/
+    /*!*position: relative;*!*/
+    /*!*left: 520px;*!*/
+    /*!*top: 70px;*!*/
+/*}*/
+
+/*#grade {*/
+    /*!*position: relative;*!*/
     /*width: 400px;*/
     /*height:380px;*/
-    /*right: 40px;*/
-}
-
-#funding-map {
-    /*position: relative;*/
-    /*right: 100px;*/
-    /*margin-top: 50px;*/
-}
-
-#map-title {
-    /*position: relative;*/
-    /*right: 11px;*/
-    width: 499px;
-}
-
-#total-don {
-    /*left: 30px;*/
-    /*top: 80px;*/
-}
-
-#pie-fund {
-    /*position: relative;*/
-    /*left: 534px;*/
-    /*top: 40px;*/
-    width: 270px;
-}
-
-#funding-chart {
-    /*position: relative;*/
-    /*right: 40px;*/
-}
-
-#resource {
-    /*position: relative;*/
-    /*left: 520px;*/
-    /*top: 40px;*/
-    height: 200px;
-}
-#red {
-    /*top: 465px;*/
-    /*left: 30px;*/
-    color: white;
-}
-
-#red-back{
-    background-color: #d85b50;
-    border-radius: 0px 0px 10px 10px;
-}
-
-#menu {
-    /*position: relative;*/
-    /*left: 520px;*/
-    /*top: 70px;*/
-}
-
-#grade {
-    /*position: relative;*/
-    width: 400px;
-    height:380px;
-    /*right: 40px;*/
-    font-weight: bold;
+    /*!*right: 40px;*!*/
+    /*font-weight: bold;*/
 }
 
