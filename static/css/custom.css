@@ -1,4 +1,6 @@
-
+#intro {
+    float: right;
+}
 
 #number-projects-nd {
    font-size: 60px;
