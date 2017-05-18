@@ -1,5 +1,5 @@
-#intro {
-    margin-top: 10px;
+.intro-button {
+    margin: 20px;
 }
 
 #number-projects-nd {
@@ -74,11 +74,10 @@
     position: fixed;
 }
 .chart-wrapper {
-    border-radius: 20px;
+
 }
 
 #green {
-    border-radius: 0px;
     top: 275px;
     left: 30px;
 }
