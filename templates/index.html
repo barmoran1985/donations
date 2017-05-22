@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="../static/lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/lib/css/keen-dashboards.css">
     <link rel="stylesheet" href="../static/lib/css/dc.css">
-    <link rel="stylesheet" href="../static/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}">
     <link rel="stylesheet" href="../static/lib/css/introjs.css">
 </head>
-<body class="application" style="background-color: red">
+<body class="application" id="barry">
 
 <div class="navbar navbar-inverse navbar-fixed-top container-fluid" role="navigation">
     <div class="container-fluid">
@@ -48,7 +48,7 @@
 
 
             <div class="row">
-                <div id="num2"class="col-md-12">
+                <div id="num2" class="col-md-12">
                     <div class="chart-wrapper">
                         <div class="chart-title">
                             Total Donations in USD

@@ -94,9 +94,9 @@ function makeGraphs(error, projectsJson, statesJson) {
     var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
 
 
-    // selectField = dc.selectMenu('#menu-select')
-    //     .dimension(stateDim)
-    //     .group(stateGroup);
+    selectField = dc.selectMenu('#menu-select')
+        .dimension(stateDim)
+        .group(stateGroup);
 
 
     numberProjectsND
