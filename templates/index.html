@@ -41,45 +41,45 @@
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="#" class="simple-text">
+                <h1>
                     2017
-                </a>
+                </h1>
             </div>
 
             <ul class="nav">
                 <li class="active">
                     <a href="#">
-                        <i class="pe-7s-graph"></i>
+{#                        <i class="pe-7s-graph"></i>#}
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="pe-7s-user"></i>
+{#                        <i class="pe-7s-user"></i>#}
                         <p>User Profile</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="pe-7s-note2"></i>
+{#                        <i class="pe-7s-note2"></i>#}
                         <p>Table List</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="pe-7s-science"></i>
+{#                        <i class="pe-7s-science"></i>#}
                         <p>Icons</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="pe-7s-map-marker"></i>
+{#                        <i class="pe-7s-map-marker"></i>#}
                         <p>Maps</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="pe-7s-bell"></i>
+{#                        <i class="pe-7s-bell"></i>#}
                         <p>Notifications</p>
                     </a>
                 </li>
@@ -110,12 +110,6 @@
                             <button class="introjs-fullbutton btn-info btn-lg pull-right" type="button" style="margin: 10px; color: white;" onclick="introJs().start();">Start Tour
                             </button>
                         </li>
-
-                        <li>
-                            <a href="#">
-                                Log out
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -133,7 +127,7 @@
                                 <p class="category"></p>
                             </div>
                             <div class="content">
-                                <div id="number-projects-nd" class="ct-chart ct-perfect-fourth" data-step="1" data-intro="The description that you want"
+                                <div id="number-projects-nd" data-step="1" data-intro="The description that you want"
                                  data-position="right"></div>
                                 <div >
 
@@ -141,7 +135,7 @@
                                     <div class="legend">
 
                                     </div>
-                                    <hr>
+
                                     <div class="stats">
 
                                     </div>
@@ -157,8 +151,8 @@
                                 <h4 class="title">Total Stuff</h4>
                                 <p class="category"></p>
                             </div>
-                            <div class="content">
-                                <div id="total-donations-stuff" class="ct-chart ct-perfect-fourth" data-step="2" data-intro="The description that you want"
+                            <div class="content metric">
+                                <div id="total-donations-stuff" data-step="2" data-intro="The description that you want"
                                  data-position="right"></div>
                                 <div >
 
@@ -166,7 +160,6 @@
                                     <div class="legend">
 
                                     </div>
-                                    <hr>
 
                                 </div>
                             </div>
@@ -180,18 +173,16 @@
                                 <h4 class="title">Total Donations</h4>
                                 <p class="category"></p>
                             </div>
-                            <div class="content">
-                                <div id="total-donations-nd" class="ct-chart ct-perfect-fourth" data-step="3" data-intro="The description that you want"
+                            <div class="content metric">
+                                <div id="total-donations-nd" data-step="3" data-intro="The description that you want"
                                  data-position="right"></div>
                                 <div >
-
-                                <div class="footer">
+                                    <div class="footer">
                                     <div class="legend">
 
                                     </div>
-                                    <hr>
 
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -199,42 +190,39 @@
             </div>
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Total Donations by State</h4>
                                 <p class="category"></p>
                             </div>
                             <div class="content">
-                                <div id="funding-map" class="ct-chart ct-perfect-fourth" data-step="4" data-intro="Mapping donations by state" data-position="right"></div>
+                                <div id="funding-map" data-step="4" data-intro="Mapping donations by state" data-position="right"></div>
 
                                 <div class="footer">
                                     <div class="legend">
-
                                     </div>
-                                    <hr>
                                     <div class="stats">
-                                        <i class="fa fa-clock-o"></i>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Poverty Level</h4>
                                 <p class="category"></p>
                             </div>
                             <div class="content">
-                                <div id="poverty-level-row-chart" class="ct-chart" data-step="5" data-intro="The description that you want"data-position="left"></div>
+                                <div id="poverty-level-row-chart" data-step="5" data-intro="The description that you want"data-position="left"></div>
 
                                 <div class="footer">
                                     <div class="legend">
 
                                     </div>
-                                    <hr>
                                     <div class="stats">
 
                                     </div>
@@ -252,13 +240,13 @@
                                 <p class="category">By Date</p>
                             </div>
                             <div class="content">
-                                <div id="time-chart" class="ct-chart" data-step="6" data-intro="The description that you want" data-position="top"></div>
+                                <div id="time-chart" data-step="6" data-intro="The description that you want" data-position="top"></div>
 
                                 <div class="footer">
                                     <div class="legend">
 
                                     </div>
-                                    <hr>
+
                                     <div class="stats">
 
                                     </div>
@@ -273,15 +261,15 @@
                         <div class="card ">
                             <div class="header">
                                 <h4 class="title">Funding Status</h4>
-                                <p class="category">All products including Taxes
+                                <p class="category">
                             <div class="content">
-                                <div id="funding-chart" class="ct-chart" data-step="7" data-intro="The description that you want" data-position="right"></div>
+                                <div id="funding-chart" data-step="7" data-intro="The description that you want" data-position="right"></div>
 
                                 <div class="footer">
                                     <div class="legend">
 
                                     </div>
-                                    <hr>
+
                                     <div class="stats">
 
                                     </div>
@@ -297,12 +285,12 @@
                                 <p class="category">By Subject</p>
                             </div>
                             <div class="content">
-                                <div id="focus-area-row-chart" class="ct-chart" data-step="8" data-intro="The description that you want" data-position="left"></div>
+                                <div id="focus-area-row-chart" data-step="8" data-intro="The description that you want" data-position="left"></div>
                                 <div class="footer">
                                     <div class="legend">
 
                                     </div>
-                                    <hr>
+
                                     <div class="stats">
 
                                     </div>
@@ -320,12 +308,12 @@
                                 <p class="category"></p>
                             </div>
                             <div class="content">
-                                <div id="resource-type-row-chart" class="ct-chart" data-step="9" data-intro="The description that you want" data-position="right"></div>
+                                <div id="resource-type-row-chart" data-step="9" data-intro="The description that you want" data-position="right"></div>
                                 <div class="footer">
                                     <div class="legend">
 
                                     </div>
-                                    <hr>
+
                                     <div class="stats">
 
                                     </div>
@@ -341,12 +329,12 @@
                                 <p class="category"></p>
                             </div>
                             <div class="content">
-                                <div id="grade-level-row-chart" class="ct-chart"  data-step="10" data-intro="Tsdkll" data-position="left"></div>
+                                <div id="grade-level-row-chart" data-step="10" data-intro="Tsdkll" data-position="left"></div>
                                 <div class="footer">
                                     <div class="legend">
 
                                     </div>
-                                    <hr>
+
                                     <div class="stats">
 
                                     </div>
