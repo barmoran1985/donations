@@ -1,10 +1,9 @@
-
 #page-title {
-    color: black;
+    color: darkgreen;
 }
 
 
-.back {
+#back {
     background-color: white;
     height: 340px;
     border-radius: 60px;
