@@ -94,10 +94,6 @@ function makeGraphs(error, projectsJson, statesJson) {
     var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
 
 
-    selectField = dc.selectMenu('#menu-select')
-        .dimension(stateDim)
-        .group(stateGroup);
-
 
     numberProjectsND
         .formatNumber(d3.format("d"))
@@ -172,7 +168,7 @@ function makeGraphs(error, projectsJson, statesJson) {
         .xAxis().ticks(4);
 
     fundingStatusmap
-        .width(500)
+        .width(700)
         .height(330)
         .dimension(stateDim)
         .group(totalDonationsByState)

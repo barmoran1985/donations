@@ -1,11 +1,12 @@
-#tour-button {
-    ;
-}
 
 #page-title {
     color: black;
 }
 
-.metric {
-    height: 50%;
+.chart-stage {
+    height: 50px;
+}
+
+#pov {
+    height: 100px;
 }
