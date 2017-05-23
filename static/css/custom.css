@@ -3,10 +3,9 @@
     color: black;
 }
 
-.chart-stage {
-    height: 50px;
-}
 
-#pov {
-    height: 100px;
+.content {
+    background-color: white;
+    height: 340px;
+    border-radius: 60px;
 }
