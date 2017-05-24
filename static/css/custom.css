@@ -1,9 +1,9 @@
 #page-title {
-    color: darkgreen;
+    color: black;
 }
 
 
-#back {
+.chart-stage {
     background-color: white;
     height: 340px;
     border-radius: 60px;
