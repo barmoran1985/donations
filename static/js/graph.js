@@ -138,8 +138,8 @@ function makeGraphs(error, projectsJson, statesJson) {
         .xAxis().ticks(4);
 
     povertyLevelChart
-        .width(280)
-        .height(230)
+        .width(340)
+        .height(300)
         .dimension(povertyLevelDim)
         .group(numProjectsByPovertyLevel)
         .xAxis().ticks(4);

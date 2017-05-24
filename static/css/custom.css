@@ -28,6 +28,12 @@
     top: 25px;
 }
 
+#poverty-level-row-chart {
+    position: relative;
+    left: 100px;
+    top: 30px;
+}
+
 #resource-type-row-chart {
     position: relative;
     left: 100px;
