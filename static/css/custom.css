@@ -2,9 +2,51 @@
     color: black;
 }
 
+.title {
+    padding-bottom: 10px;
+}
 
 .chart-stage {
-    background-color: white;
+    background-color: darkgrey;
     height: 340px;
-    border-radius: 60px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.card {
+    border-radius: 30px;
+}
+
+#funding-map {
+    position: relative;
+    top: 10px;
+}
+
+#grade-level-row-chart {
+    position: relative;
+    left: 100px;
+    top: 25px;
+}
+
+#resource-type-row-chart {
+    position: relative;
+    left: 100px;
+    top: 25px;
+}
+
+#funding-chart {
+    position: relative;
+    left: 90px;
+    top: 20px;
+}
+
+#focus-area-row-chart {
+    position: relative;
+    left: 65px;
+}
+
+#time-chart {
+    position: relative;
+    top: 60px;
+    left: 20px;
 }

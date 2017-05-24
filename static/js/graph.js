@@ -120,7 +120,7 @@ function makeGraphs(error, projectsJson, statesJson) {
 
     timeChart
         .width(960)
-        .height(200)
+        .height(250)
         .margins({top: 10, right: 50, bottom: 30, left: 50})
         .dimension(dateDim)
         .group(numProjectsByDate)
@@ -132,7 +132,7 @@ function makeGraphs(error, projectsJson, statesJson) {
 
     resourceTypeChart
         .width(300)
-        .height(250)
+        .height(300)
         .dimension(resourceTypeDim)
         .group(numProjectsByResourceType)
         .xAxis().ticks(4);
@@ -153,8 +153,8 @@ function makeGraphs(error, projectsJson, statesJson) {
 
 
     fundingStatusChart
-        .height(220)
-        .radius(90)
+        .height(310)
+        .radius(140)
         .innerRadius(40)
         .transitionDuration(1500)
         .dimension(fundingStatus)
@@ -162,14 +162,14 @@ function makeGraphs(error, projectsJson, statesJson) {
 
     gradeLevelChart
         .width(300)
-        .height(400)
+        .height(300)
         .dimension(gradeLevelDim)
         .group(numProjectsByGradeLevel)
         .xAxis().ticks(4);
 
     fundingStatusmap
-        .width(700)
-        .height(330)
+        .width(720)
+        .height(400)
         .dimension(stateDim)
         .group(totalDonationsByState)
         .colors(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#7C151D"])
