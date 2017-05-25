@@ -30,15 +30,15 @@
     <link href="../static/lib/css/pe-icon-7-stroke.css" rel="stylesheet" type='text/css'/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
 </head>
-<body>
+<body style="background-color: lightgrey">
 
-<div class="wrapper">
-    <div class="sidebar" data-color="purple" data-image="../static/img/sidebar-5.jpg">
+<div>
+    <div class="sidebar" style="position: fixed" data-color="black" data-image="../static/img/illusion.png">
 
 
         <div class="sidebar-wrapper">
             <div class="logo">
-                <h1>
+                <h1 style="position: relative; top: 5px; left: 55px">
                     2017
                 </h1>
             </div>
@@ -46,37 +46,27 @@
             <ul class="nav">
                 <li class="active">
                     <a href="#">
-                        {#                        <i class="pe-7s-graph"></i>#}
+
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        {#                        <i class="pe-7s-user"></i>#}
+
                         <p>User Profile</p>
                     </a>
                 </li>
+
+
                 <li>
                     <a href="#">
-                        {#                        <i class="pe-7s-note2"></i>#}
-                        <p>Table List</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        {#                        <i class="pe-7s-science"></i>#}
-                        <p>Icons</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        {#                        <i class="pe-7s-map-marker"></i>#}
+
                         <p>Maps</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        {#                                                <i class="pe-7s-bell"></i>#}
+
                         <p>Notifications</p>
                     </a>
                 </li>
@@ -85,9 +75,9 @@
     </div>
 
     <div class="main-panel">
-        <nav class="navbar navbar-default navbar-fixed">
-            <div class="container-fluid">
-                <div class="navbar-header">
+        <nav class="navbar navbar-default navbar-fixed" style="height: 124px; border: solid; border-color: lightgrey; border-top-width: 30px; border-bottom-width: 0px; background-color: white;">
+            <div class="container-fluid" >
+                <div class="navbar-header"  style="padding-top: 15px;">
                     <button type="button" id="tour-button" class="navbar-toggle" data-toggle="collapse"
                             data-target="#navigation-example-2">
                         <span class="sr-only">Toggle navigation</span>
@@ -95,7 +85,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <h1 id="page-title" class="navbar-brand">School Donations Dashboard</h1>
+                    <h1 id="page-title" class="navbar-brand">School Donations</h1>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -105,8 +95,9 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <button class="introjs-fullbutton btn-info btn-lg pull-right" type="button"
-                                    style="margin: 10px; color: white;" onclick="introJs().start();">Start Tour
+                            <button class="btn btn-lg pull-right"
+                                    style="margin: 10px; ; font-weight: 600; color: darkslategray; border-color: darkslategrey;
+                                    position:relative; top: 15px" onclick="introJs().start();">Start Tour
                             </button>
                         </li>
                     </ul>
@@ -119,62 +110,36 @@
             <div class="container-fluid">
 
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="header" style="background-color: #1DC7EA">
-                                <h4 class="title" style="color: white">Total Number of Donations</h4>
+                    <div class="col-md-6">
+                        <div class="card" id="card-metric-total">
+                            <div class="header">
+                                <h4 class="title-metric">Total Number of Donations</h4>
                             </div>
-                            <div class="content">
-                                <div id="number-projects-nd" style="font-size:x-large;" data-step="1"
-                                     data-intro="The description that you want"
+                            <div class="content" style="padding-left: 180px">
+                                <div class="metric" id="number-projects-nd"
+                                     style="font-size: 40px; vertical-align: middle" data-step="1"
+                                     data-intro="This metric displays the total number of donations made to American
+                                     schools in 2017 for the selected filters"
                                      data-position="right"></div>
                                 <div>
-
-                                    <div class="footer">
-                                        <div class="legend">
-
-                                        </div>
-
-                                        <div class="stats">
-
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-4">
-                        <div class="card">
+
+                    <div class="col-md-6">
+                        <div class="card" id="card-metric-dollars">
                             <div class="header">
-                                <h4 class="title">Total Stuff</h4>
-                                <p class="category"></p>
-                            </div>
-                            <div class="content">
-                                <div id="total-donations-stuff" data-step="2" data-intro="The description that you want"
-                                     data-position="right"></div>
-                                <div>
-
-                                    <div class="footer">
-                                        <div class="legend">
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Total Donations</h4>
+                                <h4 class="title-metric">Total Donations ($)</h4>
                             </div>
 
-                            <div class="content">
-                                <div id="total-donations-nd" data-step="3" data-intro="The description that you want"
-                                     data-position="right"></div>
+                            <div class="content" style="padding-left: 180px">
+                                <div class="metric" id="total-donations-nd"
+                                     style="font-size: 40px; vertical-align: middle" data-step="2"
+                                     data-intro="This metric displays the total amount of donations in dollars made to
+                                     American schools in 2017 for the selected filters"
+                                     data-position="left"></div>
                                 <div>
                                 </div>
 
@@ -191,8 +156,8 @@
                                 </div>
 
                                 <div class="chart-stage" id="back">
-                                    <div id="funding-map" style="position:relative; right: 100px" data-step="4"
-                                         data-intro="Mapping donations by state"
+                                    <div id="funding-map" data-step="3"
+                                         data-intro="This map allows the user to filter data by state"
                                          data-position="right"></div>
                                 </div>
 
@@ -208,13 +173,11 @@
 
                                 <div class="chart-stage back">
 
-                                    <div id="poverty-level-row-chart" style="position:relative; left: 60px"
-                                         data-step="5"
-                                         data-intro="The description that you want" data-position="left"></div>
-                                    <div class="footer">
-                                        <div class="legend">
-                                        </div>
-                                    </div>
+                                    <div id="poverty-level-row-chart"
+                                         data-step="4"
+                                         data-intro="This graph displays number of donations made to schools depending
+                                         on level of poverty. It is also possible to filter by category by selecting
+                                         the different bars." data-position="left"></div>
                                 </div>
 
                             </div>
@@ -223,19 +186,16 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card">
+                            <div class="card" style="height:250px">
                                 <div class="header">
                                     <h4 class="title">Number of Donations</h4>
                                 </div>
-                                <div class="chart-stage back">
-                                    <div id="time-chart" data-step="6" data-intro="The description that you want"
+                                <div class="chart-stage back" style="height:195px">
+                                    <div id="time-chart" data-step="5" data-intro="This chart displays total donations
+                                        made by date over a certain period of time. It also allows the user to select a
+                                        period range by dragging the mouse parallel to the x-axis. This will filter
+                                        data from this period."
                                          data-position="top"></div>
-
-                                    <div class="footer">
-                                        <div class="legend">
-
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -249,7 +209,10 @@
                                     <p class="category">
                                 </div>
                                 <div class="chart-stage back">
-                                    <div id="funding-chart" data-step="7" data-intro="The description that you want"
+                                    <div id="funding-chart" data-step="6" data-intro="This pie chart displays the funding
+                                            status of all donations filtered. It is also possible to filter further by
+                                            selecting the different pie sections. The legend to the top right of the
+                                            chart denotes the colours."
                                          data-position="right"></div>
                                 </div>
                             </div>
@@ -261,17 +224,10 @@
                                     <h4 class="title">Focus Area</h4>
                                 </div>
                                 <div class="chart-stage back">
-                                    <div id="focus-area-row-chart" data-step="8"
-                                         data-intro="The description that you want" data-position="left"></div>
-                                    <div class="footer">
-                                        <div class="legend">
-
-                                        </div>
-
-                                        <div class="stats">
-
-                                        </div>
-                                    </div>
+                                    <div id="focus-area-row-chart" data-step="7"
+                                         data-intro="This graph displays number of donations made to schools depending
+                                         on which area was funded. It is also possible to filter by category by selecting
+                                         the different bars." data-position="left"></div>
                                 </div>
                             </div>
                         </div>
@@ -284,8 +240,11 @@
                                     <h4 class="title">Resource Type</h4>
                                 </div>
                                 <div class="chart-stage back">
-                                    <div id="resource-type-row-chart" data-step="9"
-                                         data-intro="The description that you want" data-position="right"></div>
+                                    <div id="resource-type-row-chart" data-step="8"
+                                         data-intro="This graph displays number of
+                                         donations made to schools depending
+                                         on which grades were funded. It is also possible to filter by category by selecting
+                                         the different bars." data-position="right"></div>
                                 </div>
                             </div>
                         </div>
@@ -296,17 +255,11 @@
                                     <h4 class="title">Grade Level</h4>
                                 </div>
                                 <div class="chart-stage back">
-                                    <div id="grade-level-row-chart" data-step="10" data-intro="Tsdkll"
+                                    <div id="grade-level-chart" data-step="19" data-intro="This graph displays number of
+                                         donations made to schools depending
+                                         on which grades were funded. It is also possible to filter by category by selecting
+                                         the different pie sections."
                                          data-position="left"></div>
-                                    <div class="footer">
-                                        <div class="legend">
-
-                                        </div>
-
-                                        <div class="stats">
-
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -319,7 +272,7 @@
 
             <footer class="footer">
                 <div class="container-fluid">
-                    <nav class="pull-left">
+                    <nav style="vertical-align: middle">
                         <ul>
                             <li>
                                 <a href="#">
@@ -343,9 +296,6 @@
                             </li>
                         </ul>
                     </nav>
-                    <p class="copyright pull-right">
-
-                    </p>
                 </div>
             </footer>
 

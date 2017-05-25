@@ -1,7 +1,28 @@
+
+
 #page-title {
-    color: black;
+    color: darkslategray;
+    font-size: 50px;
+    font-weight: 200;
 }
 
+#card-metric-total {
+    background-color: steelblue;
+    color: white;
+    height: 140px;
+}
+
+.metric {
+    position: relative;
+    bottom: 40px;
+    font-weight: 900;
+}
+
+#card-metric-dollars {
+    background-color: lightseagreen;
+    color: white;
+    height: 140px;
+}
 .title {
     padding-bottom: 10px;
 }
@@ -11,26 +32,40 @@
     height: 340px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+
+}
+
+.title-metric {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
 }
 
 .card {
     border-radius: 30px;
 }
 
+.card-metric {
+    background-color: #a6e1ec;
+}
+
 #funding-map {
     position: relative;
     top: 10px;
+    right: 90px;
 }
 
-#grade-level-row-chart {
+#grade-level-chart {
     position: relative;
-    left: 100px;
-    top: 25px;
+    left: 110px;
+    top: 45px;
 }
 
 #poverty-level-row-chart {
     position: relative;
-    left: 100px;
+    left: 80px;
     top: 30px;
 }
 
@@ -42,7 +77,7 @@
 
 #funding-chart {
     position: relative;
-    left: 90px;
+    left: 20px;
     top: 20px;
 }
 
@@ -53,6 +88,10 @@
 
 #time-chart {
     position: relative;
-    top: 60px;
+    top: 50px;
     left: 20px;
+}
+
+.dc-chart {
+    font-weight: 900;
 }
